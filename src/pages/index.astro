@@ -1,19 +1,76 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
 ---
 
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
+<Layout title="XXCELL Towing & Roadside Assistance | Bergen County, NJ">
+  <main class="max-w-5xl mx-auto px-4 py-16 space-y-16">
+    <!-- HERO -->
+    <section class="text-center space-y-6">
+      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight">
+        24/7 Flatbed Towing in Bergen County, NJ
+      </h1>
+      <p class="text-lg text-slate-300">
+        XXCELL Towing provides fast, professional flatbed service for cars, SUVs, and low-profile vehicles in Bergen County, Paterson, Clifton, and nearby areas.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center mt-4">
+        <a
+          href="tel:5513465037"
+          class="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-semibold bg-emerald-500 hover:bg-emerald-400 text-white"
+        >
+          Call Now for a Tow
+        </a>
+        <a
+          href="/contact"
+          class="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-semibold border border-slate-500 text-slate-100 hover:bg-slate-800"
+        >
+          Request a Quote
+        </a>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-semibold">Towing & Roadside Services</h2>
+      <ul class="grid gap-3 sm:grid-cols-2 text-slate-200">
+        <li class="border border-slate-700 rounded-md p-4">
+          <h3 class="font-semibold mb-1">Flatbed Towing</h3>
+          <p>Local towing for cars, SUVs, light trucks, and luxury vehicles on a 22-ft rollback.</p>
+        </li>
+        <li class="border border-slate-700 rounded-md p-4">
+          <h3 class="font-semibold mb-1">Roadside Assistance</h3>
+          <p>Jump starts, tire changes, lockouts, and light winch-outs (where safe).</p>
+        </li>
+        <li class="border border-slate-700 rounded-md p-4">
+          <h3 class="font-semibold mb-1">Low-Clearance & Driveways</h3>
+          <p>Careful loading for low-profile vehicles, garages, and tight driveways.</p>
+        </li>
+        <li class="border border-slate-700 rounded-md p-4">
+          <h3 class="font-semibold mb-1">Vehicle Transport</h3>
+          <p>Dealer, body-shop, and private-party transport under 100 miles.</p>
+        </li>
+      </ul>
+    </section>
+
+    <!-- SERVICE AREA -->
+    <section class="space-y-2">
+      <h2 class="text-2xl font-semibold">Service Area</h2>
+      <p class="text-slate-200">
+        Based in Bergen County, NJ and serving surrounding areas including Paterson, Clifton, and nearby towns.
+      </p>
+    </section>
+
+    <!-- CTA -->
+    <section class="border-t border-slate-700 pt-8 text-center space-y-3">
+      <h2 class="text-2xl font-semibold">Need a tow right now?</h2>
+      <p class="text-slate-200">
+        Call <strong>551-346-5037</strong> for immediate dispatch.
+      </p>
+      <a
+        href="tel:5513465037"
+        class="inline-flex items-center justify-center rounded-md px-6 py-3 text-base font-semibold bg-emerald-500 hover:bg-emerald-400 text-white"
+      >
+        Tap to Call
+      </a>
+    </section>
+  </main>
 </Layout>
