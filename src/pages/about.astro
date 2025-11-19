@@ -1,0 +1,290 @@
+---
+import TowingLayout from '../layouts/TowingLayout.astro';
+import TowingHeader from '../components/TowingHeader.astro';
+import TowingFooter from '../components/TowingFooter.astro';
+---
+
+<TowingLayout
+  title="About XXCELL Towing - Bergen County NJ"
+  description="Learn about XXCELL Towing & Transportation, Bergen County's trusted 24/7 towing and roadside assistance service. Licensed, insured, and professional."
+>
+  <TowingHeader />
+  
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <h1>About XXCELL Towing & Transportation</h1>
+        <p class="page-hero-subtitle">Bergen County's trusted partner for towing and roadside assistance</p>
+      </div>
+    </section>
+
+    <section class="about-content">
+      <div class="container">
+        <div class="about-intro">
+          <h2>Professional Towing Service You Can Trust</h2>
+          <p>XXCELL Towing & Transportation is a professional towing and roadside assistance company serving all of Bergen County, New Jersey. We understand that vehicle breakdowns and emergencies are stressful, which is why we're committed to providing fast, reliable, and professional service 24 hours a day, 7 days a week.</p>
+          <p>Whether you need emergency towing after an accident, roadside assistance for a dead battery, or scheduled transport for a vehicle purchase, our experienced team is here to help. We treat every customer with respect and every vehicle with care.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <h3>Our Mission</h3>
+            <p>To provide the fastest, safest, and most professional towing and roadside assistance services in Bergen County. We're committed to getting you and your vehicle to safety quickly and efficiently, with transparent pricing and courteous service.</p>
+          </div>
+
+          <div class="about-card">
+            <h3>Our Service Area</h3>
+            <p>We proudly serve all of Bergen County including Englewood, Paramus, Hackensack, Ridgewood, Fort Lee, Teaneck, Westwood, Fair Lawn, and surrounding communities. Our local towing service covers up to 100 miles throughout New Jersey.</p>
+          </div>
+
+          <div class="about-card">
+            <h3>Licensed & Insured</h3>
+            <p>XXCELL Towing is fully licensed and insured for your peace of mind. We maintain all necessary permits and insurance coverage to operate as a professional towing service in New Jersey, protecting both you and your vehicle.</p>
+          </div>
+
+          <div class="about-card">
+            <h3>Modern Equipment</h3>
+            <p>Our fleet includes modern flatbed tow trucks equipped with hydraulic tilting beds, professional ramps for low-clearance vehicles, and secure tie-down systems. We use the right equipment for safe vehicle transport every time.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services-overview">
+      <div class="container">
+        <h2>What We Offer</h2>
+        <div class="services-list">
+          <div class="service-item">
+            <h3>Flatbed Towing</h3>
+            <p>Safe flatbed towing for cars, SUVs, and low-clearance vehicles using professional equipment and experienced drivers.</p>
+          </div>
+          <div class="service-item">
+            <h3>Emergency Towing</h3>
+            <p>24/7 emergency towing service for accidents, breakdowns, and roadside emergencies throughout Bergen County.</p>
+          </div>
+          <div class="service-item">
+            <h3>Roadside Assistance</h3>
+            <p>Jump starts, tire changes, lockout service, and fuel delivery available day and night.</p>
+          </div>
+          <div class="service-item">
+            <h3>Local Towing</h3>
+            <p>Towing service up to 100 miles for scheduled transport, vehicle purchases, and long-distance recovery.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose">
+      <div class="container">
+        <h2>Why Choose XXCELL Towing?</h2>
+        <div class="reasons-grid">
+          <div class="reason">
+            <div class="reason-number">1</div>
+            <h3>Fast Response Times</h3>
+            <p>We prioritize quick arrival throughout Bergen County, typically arriving within 30-45 minutes depending on location and traffic.</p>
+          </div>
+          <div class="reason">
+            <div class="reason-number">2</div>
+            <h3>24/7 Availability</h3>
+            <p>Vehicle emergencies don't follow a schedule. That's why we're available around the clock, every single day of the year including holidays.</p>
+          </div>
+          <div class="reason">
+            <div class="reason-number">3</div>
+            <h3>Experienced Team</h3>
+            <p>Our drivers are trained professionals who know how to handle all types of vehicles and towing situations safely and efficiently.</p>
+          </div>
+          <div class="reason">
+            <div class="reason-number">4</div>
+            <h3>Transparent Pricing</h3>
+            <p>No hidden fees or surprise charges. We provide clear pricing information upfront so you know what to expect.</p>
+          </div>
+          <div class="reason">
+            <div class="reason-number">5</div>
+            <h3>Local Knowledge</h3>
+            <p>As a Bergen County towing service, we know the area inside and out, ensuring the fastest route to your location and destination.</p>
+          </div>
+          <div class="reason">
+            <div class="reason-number">6</div>
+            <h3>Professional Service</h3>
+            <p>We treat every customer with respect and every vehicle with care. Your satisfaction and safety are our top priorities.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-cta">
+      <div class="container">
+        <h2>Get in Touch</h2>
+        <p>Need towing or roadside assistance? We're here to help 24/7</p>
+        <div class="cta-buttons">
+          <a href="tel:5513465037" class="btn btn-primary">Call 551-346-5037</a>
+          <a href="/contact" class="btn btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <TowingFooter />
+</TowingLayout>
+
+<style>
+  .page-hero {
+    background: linear-gradient(135deg, var(--color-black) 0%, var(--color-gray) 100%);
+    color: var(--color-white);
+    padding: 5rem 0;
+    text-align: center;
+  }
+  
+  .page-hero h1 {
+    color: var(--color-yellow);
+    margin-bottom: 1rem;
+  }
+  
+  .page-hero-subtitle {
+    font-size: 1.25rem;
+  }
+  
+  .about-content {
+    background-color: var(--color-white);
+  }
+  
+  .about-intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+  }
+  
+  .about-intro h2 {
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-intro p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+  
+  .about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+  }
+  
+  .about-card {
+    background-color: var(--color-gray-light);
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--color-yellow);
+  }
+  
+  .about-card h3 {
+    color: var(--color-black);
+    margin-bottom: 1rem;
+  }
+  
+  .services-overview {
+    background-color: var(--color-gray-light);
+  }
+  
+  .services-overview h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  .service-item {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 8px;
+  }
+  
+  .service-item h3 {
+    color: var(--color-black);
+    margin-bottom: 0.5rem;
+  }
+  
+  .why-choose {
+    background-color: var(--color-white);
+  }
+  
+  .why-choose h2 {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  .reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  .reason {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .reason-number {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: var(--color-yellow);
+    color: var(--color-black);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+  }
+  
+  .reason h3 {
+    color: var(--color-black);
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-cta {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    text-align: center;
+    padding: 5rem 0;
+  }
+  
+  .contact-cta h2 {
+    color: var(--color-yellow);
+    margin-bottom: 1rem;
+  }
+  
+  .contact-cta p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  @media (max-width: 768px) {
+    .page-hero {
+      padding: 3rem 0;
+    }
+    
+    .about-grid,
+    .services-list,
+    .reasons-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .cta-buttons {
+      flex-direction: column;
+    }
+  }
+</style>

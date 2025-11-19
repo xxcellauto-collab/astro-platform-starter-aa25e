@@ -1,0 +1,108 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  ogImage?: string;
+}
+
+const { title, description, canonical, ogImage } = Astro.props;
+const fullTitle = `${title} | XXCELL Towing & Transportation`;
+const canonicalURL = canonical || new URL(Astro.url.pathname, Astro.site).toString();
+const defaultOgImage = '/images/towing-og.jpg';
+const ogImageURL = ogImage || defaultOgImage;
+
+const schemaData = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "AutomotiveBusiness"],
+  "name": "XXCELL Towing & Transportation",
+  "image": "https://xxcelltowing.netlify.app/images/towing-og.jpg",
+  "telephone": "+15513465037",
+  "address": {
+    "@type": "PostalAddress",
+    "addressRegion": "NJ",
+    "addressLocality": "Bergen County"
+  },
+  "areaServed": {
+    "@type": "GeoCircle",
+    "geoMidpoint": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.9041",
+      "longitude": "-74.0719"
+    },
+    "geoRadius": "100"
+  },
+  "openingHours": "Mo,Tu,We,Th,Fr,Sa,Su 00:00-23:59",
+  "priceRange": "$$",
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "40.9041",
+    "longitude": "-74.0719"
+  },
+  "url": "https://xxcelltowing.netlify.app",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Towing Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Flatbed Towing",
+          "description": "Safe flatbed towing for cars and SUVs across Bergen County"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Roadside Assistance",
+          "description": "24/7 emergency roadside assistance including jump starts, lockouts, tire changes"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Local Towing",
+          "description": "Local towing service under 100 miles throughout New Jersey"
+        }
+      }
+    ]
+  }
+};
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={canonicalURL}>
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonicalURL}>
+  <meta property="og:image" content={ogImageURL}>
+  <meta property="og:site_name" content="XXCELL Towing & Transportation">
+  
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content={fullTitle}>
+  <meta name="twitter:description" content={description}>
+  <meta name="twitter:image" content={ogImageURL}>
+  
+  <script type="application/ld+json" set:html={JSON.stringify(schemaData)} />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <slot />
+</body>
+</html>
