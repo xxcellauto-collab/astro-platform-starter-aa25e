@@ -5,14 +5,14 @@ import tailwindcss from '@tailwindcss/vite';
 import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  site: 'https://xxcelltowing.com',
-  vite: {
-    plugins: [tailwindcss()]
-  },
-  integrations: [react(), sitemap()],
-  adapter: netlify({
-    devFeatures: {
-      environmentVariables: true
-    }
-  })
+    site: 'https://xxcelltowing.netlify.app',
+    vite: {
+        plugins: [tailwindcss()]
+    },
+    integrations: [react()],
+    adapter: netlify({
+        devFeatures: {
+            environmentVariables: true
+        }
+    })
 });
